@@ -1,0 +1,7 @@
+[package]
+name = "blockchain"
+version = "0.1.0"
+authors = ["Dowon Cha <dowoncha.cs@gmail.com>"]
+
+[dependencies]
+rust-crypto = "^0.2"
