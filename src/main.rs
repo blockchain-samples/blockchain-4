@@ -44,14 +44,19 @@ impl Block {
     }
 }
 
+pub type Blockchain = Vec<Block>;
+
+impl Blockchain {
+
+}
+
 fn main() {
-    let genesis_block = Block::new("I AM THE GENESIS BLOCK, THE ONE.", "0");
+    let mut blockchain = Vec::new();
 
-    println!("Genesis Block hash: {}", genesis_block.hash());
+    blockchain.push(Block::new("I AM THE GENESIS BLOCK, THE ONE AND ONLY.", "0"));
+    blockchain.push(Block::new("Second block mofos", 
+        blockchain.last().unwrap().hash());
+    blockchain.push(Block::new("Third block up in the house", 
+        blockchain.last().unwrap().hash());
 
-    let second_block = Block::new("Second block mofos", genesis_block.hash());
-    let third_block = Block::new("Third block up in the house", second_block.hash());
-
-    println!("Second block: {}", second_block.hash());
-    println!("Third block: {}", third_block.hash());
 }
